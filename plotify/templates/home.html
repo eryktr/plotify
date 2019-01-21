@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+    <script src="{{ url_for('.static', filename="js/plot.js" ) }}"></script>
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            Welcome to <b>plotify</b>, a simple web application allowing you to plot real-valued functions.
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <canvas id="plot_canvas" style="height:80vh;width:100%;border:2px solid black">
+
+                </canvas>
+            </div>
+            <div class="col-lg-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5>Functions</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label>Function:</label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <input type="text"/>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <button class="btn btn-primary btn-sm" >Plot</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,6 +1,6 @@
 import unittest
-from rpn_calculator import RPNCalculator
-from validator import Validator
+from .rpn_calculator import RPNCalculator
+from .validator import Validator
 
 class TestCalculator(unittest.TestCase):
 

@@ -1,6 +1,6 @@
-from input_parser import InputParser
-from validator import Validator
-from rpn_processor import RPNProcessor
+from .input_parser import InputParser
+from .validator import Validator
+from .rpn_processor import RPNProcessor
 
 class RPNCalculator:
     
