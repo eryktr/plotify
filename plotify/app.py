@@ -11,11 +11,11 @@ calculator = RPNCalculator()
 def home():
     return render_template("home.html")
 
-@app.route('/rest/<expression>')
-def eval(expression):
-    LOWER = -10
-    UPPER = 10
-    STEP = 0.01
+@app.route('/rest/<expression>/<xfrom>/<xto>')
+def eval(expression, xfrom, xto):
+    LOWER = float(xfrom)
+    UPPER = float(xto)
+    STEP = abs(LOWER - UPPER) / 10000
     CURRENT = LOWER
     plot_points = []
     while CURRENT <= UPPER:

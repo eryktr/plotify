@@ -12,7 +12,7 @@
             Welcome to <b>plotify</b>, a simple web application allowing you to plot real-valued functions.
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" id="canvas_container">
                 <canvas id="plot_canvas" style="height:80vh;width:100%;border:2px solid black">
 
                 </canvas>
@@ -36,7 +36,24 @@
                         <div class="col-lg-4">
                             <button id="plot_btn" class="btn btn-primary btn-sm" >Plot</button>
                         </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label>x from:</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input id="xfrom" type="number">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <label>x to:</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <input id="xto" type="number">
+                        </div>
                     </div>
                 </div>
             </div>
