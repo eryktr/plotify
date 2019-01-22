@@ -2,7 +2,7 @@
 {{ points|tojson }}
 {% block scripts %}
     {{ super() }}
-    <script src="{{ url_for('.static', filename="js/plot.js" ) }}"></script>
+    <script src="{{ url_for('.static', filename="js/bundle.js" ) }}"></script>
 {% endblock %}
 
 {% block content %}
