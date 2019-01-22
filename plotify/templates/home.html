@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block scripts %}
-    <script src="{{ url_for('.static', filename="js/plot.js" ) }}"></script>
     {{ super() }}
+    <script src="{{ url_for('.static', filename="js/plot.js" ) }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -25,15 +25,15 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <label>Function:</label>
+                            <label id="">Function:</label>
                         </div>
 
                         <div class="col-lg-4">
-                            <input type="text"/>
+                            <input id="function1" type="text"/>
                         </div>
 
                         <div class="col-lg-4">
-                            <button class="btn btn-primary btn-sm" >Plot</button>
+                            <button id="plot_btn" class="btn btn-primary btn-sm" >Plot</button>
                         </div>
 
                     </div>
