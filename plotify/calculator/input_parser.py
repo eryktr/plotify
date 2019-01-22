@@ -1,5 +1,5 @@
-from stack import Stack
-from validator import Validator
+from .stack import Stack
+from .validator import Validator
 class InputParser:        
     
     def __fix_lacking_spaces(self, input):

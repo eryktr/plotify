@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-
+{{ points|tojson }}
 {% block scripts %}
     {{ super() }}
     <script src="{{ url_for('.static', filename="js/plot.js" ) }}"></script>
 {% endblock %}
 
 {% block content %}
+    points length: {{ points }}
     <div class="container-fluid">
         <div class="row">
             Welcome to <b>plotify</b>, a simple web application allowing you to plot real-valued functions.
