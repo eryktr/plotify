@@ -6,18 +6,22 @@ The project was implemented using Flask, my own Reverse Polish Notation library 
 To properly build this project, you need to have `pip`, `npm` and `browserify` installed.
 
 1. To quickly install required Python dependencies, run:
-  pip install -r requirements.txt
+
+        pip install -r requirements.txt
 
 2. Now, to install all the javascript dependencies, run:
-    cd static
-    npm install
+    
+        cd static
+        npm install
   
 3. Now, we need to build the front: 
-    cd static
-    cd js
-    browserify plot.js -o bundle.js
+    
+        cd static
+        cd js
+        browserify plot.js -o bundle.js
  
 4. Now, it't time to run the server:
-    python -m flask run
+    
+        python -m flask run
   
   
