@@ -12,7 +12,7 @@ $(document).ready(() => {
         let points = [];
 
         $.ajax({
-            url: "/rest/"+expression+"/"+xfrom+"/"+xto, success: function (result) {
+            url: "/rest/"+expression.replace('/',':')+"/"+xfrom+"/"+xto, success: function (result) {
                 points = result;
                 points.forEach((point) => console.log(point));
                 $('#plot_canvas').remove();
@@ -34,7 +34,14 @@ $(document).ready(() => {
                         scales: {
                             xAxes: [{
                                 type: 'linear',
-                                position: 'bottom'
+                                position: 'bottom',
+                                scaleLabel: {
+                                    display: true,
+                                    scaleString: 'x'
+                                }
+                            }],
+                            yAxes: [ {
+                               labelString: 'y'
                             }]
                         }
                     }

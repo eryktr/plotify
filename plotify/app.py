@@ -13,6 +13,7 @@ def home():
 
 @app.route('/rest/<expression>/<xfrom>/<xto>')
 def eval(expression, xfrom, xto):
+    exp = expression.replace(':', '/')
     LOWER = float(xfrom)
     UPPER = float(xto)
     STEP = abs(LOWER - UPPER) / 10000
@@ -20,7 +21,7 @@ def eval(expression, xfrom, xto):
     plot_points = []
     while CURRENT <= UPPER:
         try:
-            plot_points.append({'x':CURRENT, 'y':calculator.evaluate(expression, CURRENT)})
+            plot_points.append({'x':CURRENT, 'y':calculator.evaluate(exp, CURRENT)})
         except ValueError:
             pass
         finally:
